@@ -40,7 +40,7 @@ function App() {
                 <h1>{item.name}</h1>
               </div>
               <div className='button'>
-                <button className='delete-button-category' onClick={() => deleteCategoryButton(item.id)}>Excluir</button>
+                <button className='delete-button-category' onClick={() => deleteCategoryButton(item.id ?? 0)}>Excluir</button>
               </div>
             </div>
             <div className="card-grid">

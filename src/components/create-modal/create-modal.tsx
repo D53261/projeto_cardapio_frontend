@@ -10,7 +10,7 @@ import { useCategoryDataMutate } from '../../hooks/useCategoryDataMutate';
 interface InputProps {
     label: string,
     value: string | number,
-    updateValue(value: any): void
+    updateValue(value: unknown): void
 }   
 
 interface ModalProps {
