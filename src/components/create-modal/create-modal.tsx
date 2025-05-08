@@ -49,6 +49,11 @@ export function CreateModal({ closeModal }: ModalProps) {
             id: Number(categoryId)
         },
       };
+
+      if (categories?.length === 0) {
+        alert("Cadastre uma categoria antes de cadastrar um item no cardápio");
+        return;  
+      }
   
       mutate1(foodData);
     };
