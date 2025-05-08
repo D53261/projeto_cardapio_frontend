@@ -4,7 +4,7 @@ import { CategoryData } from "../interface/CategoryData";
 
 const API_URL = 'http://localhost:8080';
 
-const postCategory = async (data: CategoryData): AxiosPromise<any> => {
+const postCategory = async (data: CategoryData): AxiosPromise<unknown> => {
     const response = await axios.post(API_URL + '/category', data);
     return response;
 }
@@ -15,7 +15,7 @@ export function useCategoryDataMutate(){
         mutationFn: postCategory,
         retry: 2,
         onSuccess: () => {
-            queryClient.invalidateQueries(['categoryData'])
+            queryClient.invalidateQueries({ queryKey: ['categoryData']})
         }
     })
 

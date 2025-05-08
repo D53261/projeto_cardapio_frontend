@@ -3,7 +3,7 @@ import axios, { AxiosPromise } from "axios"
 
 const API_URL = 'http://localhost:8080';
 
-const deleteCategory = async (id: number): AxiosPromise<any> => {
+const deleteCategory = async (id: number): AxiosPromise<unknown> => {
     const response = await axios.delete(API_URL + '/category/' + id);
     return response;
 }
@@ -14,7 +14,7 @@ export function useCategoryDataDelete(){
         mutationFn: deleteCategory,
         retry: 2,
         onSuccess: () => {
-            queryClient.invalidateQueries(['categoryData'])
+            queryClient.invalidateQueries({ queryKey: ['categoryData']})
         }, onError: (error) => {
             console.error('Error deleting data:', error);
         }
