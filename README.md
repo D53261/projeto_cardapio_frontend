@@ -44,6 +44,9 @@ Siga os passos abaixo para executar o projeto em sua máquina:
 
 > **Observação**: Para que a aplicação front-end deste repositório funcione corretamente, é necessário que o back-end esteja em execução simultaneamente em outra porta, permitindo assim a conexão com o banco de dados.
 
+### Vercel para visualizar: https://projeto-cardapio-frontend.vercel.app
+> **Observação**: Só será funcional com o back-end em conjunto
+
 ## Feito por:
 ### Danilo Ribeiro 
 ### Linkedin: https://www.linkedin.com/in/danilo-ribeiro-catroli-da-silva/
