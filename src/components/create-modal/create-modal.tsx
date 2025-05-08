@@ -54,6 +54,16 @@ export function CreateModal({ closeModal }: ModalProps) {
         alert("Cadastre uma categoria antes de cadastrar um item no cardápio");
         return;  
       }
+
+      if(price <= 0) {
+        alert("O preço deve ser maior que 0");
+        return;
+      }
+
+      if (price.toString().includes(",")) {
+        alert("O preço não pode conter vírgulas, utilize ponto (.) para separar os centavos");
+        return;
+      }
   
       mutate1(foodData);
     };
